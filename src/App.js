@@ -3,6 +3,7 @@ import NotFound from './pages/NotFound';
 import Category from './pages/Category';
 import Details from './pages/Details';
 import Generation from './pages/Generation';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';

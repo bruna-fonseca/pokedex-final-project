@@ -1,0 +1,26 @@
+.nav-links {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 15px;
+  font-size: 18px;
+
+  transition: 0.4s;
+}
+
+.nav-links:hover {
+  color: #F2243A;
+  background-color: #FFF;
+  padding: 10px;
+}
+
+.pokeball {
+  height: 40px;
+  margin-right: 8px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
