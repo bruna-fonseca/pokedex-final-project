@@ -21,14 +21,16 @@ const IMG_STYLES = {
 };
 export default function NotFound() {
   return (
-    <div style={ CONTAINER_STYLES } >
-        <Title>Página não encontrada</Title>
-        <img
-          src={ ImgNotFound }
-          alt="Imagem da tela NotFound"
-          style={ IMG_STYLES }
-        />
-        <Link style={{ textDecoration: 'none' }}  to="/"><StyledButton>Volte para a home</StyledButton></Link>
-    </div>
+    <>
+      <div style={ CONTAINER_STYLES } >
+          <Title>Página não encontrada</Title>
+          <img
+            src={ ImgNotFound }
+            alt="Imagem da tela NotFound"
+            style={ IMG_STYLES }
+          />
+          <Link style={{ textDecoration: 'none' }}  to="/"><StyledButton>Volte para a home</StyledButton></Link>
+      </div>
+    </>
   );
 };
