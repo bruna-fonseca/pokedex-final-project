@@ -1,6 +1,6 @@
 export const typesInfo = [
   {
     titulo: 'Fogo',
-    img: 
+    img: fogoImg
   }
 ]

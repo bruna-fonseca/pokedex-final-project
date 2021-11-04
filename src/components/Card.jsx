@@ -1,13 +1,16 @@
 import * as React from 'react';
 
+import { useHistory } from 'react-router-dom';
+
 import '../styles/Card-generation.css';
 
 
 export default function Cards({ pokemon }) {
+  const history = useHistory();
   const pokemonId = pokemon.url.match(/\d+/g).slice(1)[0];
 
   function handleClick(pokemonId) {
-    console.log(pokemonId);
+    history.push(pokemonId)
   };
 
   return (
