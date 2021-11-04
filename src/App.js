@@ -3,6 +3,7 @@ import NotFound from './pages/NotFound';
 import Category from './pages/Category';
 import Details from './pages/Details';
 import Generation from './pages/Generation';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/categorias" component={Category} />
         <Route path="/geracoes" component={Generation} />
-        <Route path="/pokemon-detalhes" component={Details} />
+        <Route path="/pokemon/:pokemonId" component={Details} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
