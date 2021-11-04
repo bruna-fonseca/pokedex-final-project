@@ -17,7 +17,15 @@ export const StyledButton = styled.button`
   align-items: center;
 `;
 
+export const NotFoundTitle = styled.h1`
+  color: #313131;
+  text-align: center;
+`;
+
 export const Title = styled.h1`
   color: #313131;
+  font-size: 50px;
+  text-align: center;
+  margin: 50px;
   text-align: center;
 `;

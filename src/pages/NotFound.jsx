@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ImgNotFound from '../assets/not-found-img.png';
-import { StyledButton, Title } from '../styles/styles';
+import { StyledButton, NotFoundTitle } from '../styles/styles';
 
 const CONTAINER_STYLES = {
   display: 'flex',
@@ -23,7 +23,7 @@ export default function NotFound() {
   return (
     <>
       <div style={ CONTAINER_STYLES } >
-          <Title>Página não encontrada</Title>
+          <NotFoundTitle>Página não encontrada</NotFoundTitle>
           <img
             src={ ImgNotFound }
             alt="Imagem da tela NotFound"
