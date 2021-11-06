@@ -1,7 +1,7 @@
-import eletrico from '../assets/categoria-eletrico.png';
-import fogo from '../assets/categoria-fogo.jpg';
-import agua from '../assets/categoria-agua.jpg';
-import terra from '../assets/categoria-terra.jpg';
+import eletrico from '../assets/categoriaeletrico.png';
+import fogo from '../assets/categoriafogo.png';
+import agua from '../assets/categoriagua.png';
+import planta from '../assets/categoriaplanta.png';
 
 const infocategory = [
     {
@@ -13,8 +13,8 @@ const infocategory = [
       titulo: 'Categoria Água',
     },
     {
-      img: terra,
-      titulo: 'Categoria Terra',
+      img: planta,
+      titulo: 'Categoria Planta',
     },
   {
     img: eletrico,
