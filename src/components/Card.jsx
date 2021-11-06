@@ -20,8 +20,9 @@ export default function Cards({ pokemon }) {
           className="card-img"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.match(/\d+/g).slice(1)}.png`}
           alt={pokemon.name}
-          style={{ width: '170px' }}
+          style={{ width: '220px' }}
         />
+        <div className="shadow"></div>
       </div>
       <div className="card-content">
         <h2>{pokemon.name}</h2>
