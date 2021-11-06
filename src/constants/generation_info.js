@@ -1,7 +1,7 @@
-import primeiraGeracao from '../assets/1-geracao.jpeg';
-import segundaGeracao from '../assets/2-geracao.jpeg';
-import terceiraGeracao from '../assets/3-geracao.jpeg';
-import QuartaGeracao from '../assets/4-geracao.jpeg';
+import primeiraGeracao from '../assets/geracao1.jpeg';
+import segundaGeracao from '../assets/geracao2.jpeg';
+import terceiraGeracao from '../assets/geracao3.jpeg';
+import QuartaGeracao from '../assets/geracao4.jpeg';
 
 const infoGeneration = [
   {

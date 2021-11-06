@@ -40,7 +40,7 @@ export default function Generation() {
   }, []);
 
   function showMore() {
-    setVisible((prevValues) => prevValues + 6);
+    setVisible((prevValues) => prevValues + 9);
   };
 
   function firstGeneration() {
@@ -68,7 +68,7 @@ export default function Generation() {
     axios.get('https://pokeapi.co/api/v2/generation/4/')
       .then((res) => setGeneration(res.data.pokemon_species))
       .catch(error => console.log(error));
-    setVisible(6);
+    setVisible(9);
   };
 
   return (
