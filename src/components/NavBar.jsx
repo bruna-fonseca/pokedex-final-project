@@ -87,6 +87,7 @@ export default function NavBar() {
                   <Link className="nav-links" to="/">Home</Link>
                   <Link className="nav-links" to="/geracoes">Gerações</Link>
                   <Link className="nav-links" to="/categorias">Categorias</Link>
+                  <Link className="nav-links" to="/sobre">Sobre</Link>
                 </div>
               )}
             </div>
