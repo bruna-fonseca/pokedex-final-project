@@ -23,7 +23,7 @@ export const NotFoundTitle = styled.h1`
 `;
 
 export const Title = styled.h1`
-  color: #313131;
+  color: ${props => props.fontColor};
   font-size: 50px;
   text-align: center;
   margin: 50px;

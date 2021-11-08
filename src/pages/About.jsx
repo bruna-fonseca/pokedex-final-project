@@ -75,8 +75,7 @@ export default function About() {
           <Tab label="Beatriz Nogueira" {...a11yProps(2)} />
           <Tab label="Bruna Fonseca" {...a11yProps(3)} />
           <Tab label="Cris" {...a11yProps(4)} />
-          <Tab label="Gustavo" {...a11yProps(5)} />
-          <Tab label="Otávio Falcão" {...a11yProps(6)} />
+          <Tab label="Otávio Falcão" {...a11yProps(5)} />
 
         </Tabs>
       </Box>
@@ -121,9 +120,6 @@ export default function About() {
         <Title>Cris</Title>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={5}>
-        <Title>Gustavo</Title>
-      </TabPanel>
-      <TabPanel style={CONTENT_TAB_STYLES} value={value} index={6}>
       <Title>Otávio Falcão</Title>
       </TabPanel>
     </Box>
