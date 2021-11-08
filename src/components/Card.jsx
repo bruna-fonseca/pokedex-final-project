@@ -10,7 +10,7 @@ export default function Cards({ pokemon }) {
   const pokemonId = pokemon.url.match(/\d+/g).slice(1)[0];
 
   function handleClick(pokemonId) {
-    history.push(pokemonId)
+    history.push(`pokemon/${pokemonId}`)
   };
 
   return (
