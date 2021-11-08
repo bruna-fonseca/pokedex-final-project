@@ -9,7 +9,6 @@ import Cards from '../components/Card';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from '@mui/styles';
 
-import generation_info from '../constants/generation_info';
 
 import { Title, StyledButton } from '../styles/styles';
 
@@ -30,7 +29,7 @@ export default function Category(){
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-    document.title = 'Gerações - Pokedex'
+    document.title = 'Categorias - Pokedex';
   }, []);
 
   useEffect(() => {
