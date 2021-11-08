@@ -12,9 +12,14 @@ export default function DetailsCard({ pokemonInfo }) {
             ))}
       </div>
       <div className="card-stats">
-        <p><span>Ataque: </span>{pokemonInfo.stats[1].base_stat}</p>
-        <p><span>Defesa: </span>{pokemonInfo.stats[2].base_stat}</p>
-        <p><span>Velocidade: </span>{pokemonInfo.stats[5].base_stat}</p>
+        <p><span >id: </span>{pokemonInfo.id}</p>
+        <p><span >hp: </span>{pokemonInfo.stats[0].base_stat}</p>
+        <p><span >atack: </span>{pokemonInfo.stats[1].base_stat}</p>
+        <p><span >defence: </span>{pokemonInfo.stats[2].base_stat}</p>
+        <p><span >s-atack: </span>{pokemonInfo.stats[3].base_stat}</p>
+        <p><span >s-defense: </span>{pokemonInfo.stats[4].base_stat}</p>
+        <p><span >speed: </span>{pokemonInfo.stats[5].base_stat}</p>
+        <p><span >ability: </span>{pokemonInfo.abilities[0].ability.name}</p>
       </div>
     </div>
   );

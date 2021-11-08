@@ -18,9 +18,10 @@ export default function Cards({ pokemon }) {
       <div>
         <img
           className="card-img"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.match(/\d+/g).slice(1)}.png`}
+          
+          src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.url.match(/\d+/g).slice(1)}.png`}
           alt={pokemon.name}
-          style={{ width: '170px' }}
+          style={{ width: '120px', height: '20vh'}}                                              
         />
       </div>
       <div className="card-content">

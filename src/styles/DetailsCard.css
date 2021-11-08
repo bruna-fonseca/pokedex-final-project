@@ -6,15 +6,16 @@
 }
 
 .card-details {
-  height: 350px;
+  height: 400px;
   width: 450px;
   border: 5px solid var(--red);
+  border-radius: 4px;
 
 }
 
 .card-top {
   background-color: var(--yellow);
-  height: 100px;
+  height: 110px;
 
   padding: 20px;
 }
@@ -22,7 +23,7 @@
 .card-top h2 {
   color: var(--black);
   font-size: 35px;
-  margin-left: 30px;
+  margin-left: auto;
 }
 
 .card-top h2::first-letter {
@@ -44,11 +45,20 @@
 }
 
 .card-stats {
-  margin: 20px;
-  font-size: 24px;
+
+ margin: 27px;
+ line-height: 2.8rem;
+ font-size: 24px;
+
+
+ display: grid;
+ grid-template-columns: auto auto; 
+ 
 }
 
-.card-stats span {
+.card-stats span{
+  text-transform: capitalize;
   font-weight: bold;
-  margin-left: 30px;
+
+  color: #313131;
 }

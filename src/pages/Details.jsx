@@ -42,7 +42,7 @@ export default function Details() {
           <Title>Pokemon Stats</Title>
           <div style={ CONTAINER_STYLES }>
             <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}
+              src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
               alt={`pokemon ${pokemonId}`}
               style={{ height: '300px' }}
             />
