@@ -22,6 +22,7 @@ export default function Cards({ pokemon_specie }) {
           alt={pokemon_specie.name}
           style={{ width: '170px' }}
         />
+        <div className="shadow"></div>
       </div>
       <div className="card-content">
         <h2>{pokemon_specie.name}</h2>

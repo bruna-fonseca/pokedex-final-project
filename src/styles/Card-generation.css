@@ -43,11 +43,30 @@
 }
 
 .card-content {
+
   background-color: #F2243A;
-  color: #FFF;
+ 
   width: 100%;
   border-radius: 15px;
   height: 80px;
-  text-align: center;
-  padding: 20px;
+ 
 }
+
+.card-content h2{
+  color: #FFF;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 25px 0;
+
+}
+
+.shadow{
+  width: 50%;
+  height: 5vh;
+  background: rgb(224, 223, 223);
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  top: -25px;
+  left: 50px;
+  transform: perspective(300px) rotateX(45deg);
