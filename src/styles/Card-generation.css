@@ -70,3 +70,6 @@
   top: -25px;
   left: 50px;
   transform: perspective(300px) rotateX(45deg);
+
+  padding: 20px;
+}

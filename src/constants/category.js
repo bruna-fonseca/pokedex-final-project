@@ -14,7 +14,7 @@ const infocategory = [
     },
     {
       img: planta,
-      titulo: 'Categoria Planta',
+      titulo: 'Categoria Grama',
     },
   {
     img: eletrico,
