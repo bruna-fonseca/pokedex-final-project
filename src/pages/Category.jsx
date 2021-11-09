@@ -51,6 +51,7 @@ export default function Category(){
       }
 
       );
+      setVisible(9);
   }
 
   function catWater() {
@@ -65,6 +66,7 @@ export default function Category(){
           console.log(e)
         }
       );
+      setVisible(9);
   }
   function catGrass() {
     axios.get('https://pokeapi.co/api/v2/type/12/')
@@ -77,6 +79,7 @@ export default function Category(){
         console.log(e)
       }
       );
+      setVisible(9);
   }
 
   function catRaio() {
@@ -91,10 +94,11 @@ export default function Category(){
           console.log(e)
         }
       );
+      setVisible(9);
   }
 
   function showMore() {
-    setVisible((prevValues) => prevValues + 6);
+    setVisible((prevValues) => prevValues + 9);
   };
   return (
     <div>
@@ -110,7 +114,7 @@ export default function Category(){
         <Grid className={classes.gridContainer} container spacing={4}>
           {categorias && categorias.slice(0, visible).map((pokemon, index) => (
             <Grid key={index} item xs={12} sm={6} md={4} >
-              <Cards pokemon={pokemon} />
+              <Cards pokemon_specie={{ name: pokemon.pokemon.name, url: pokemon.pokemon.url }} />
             </Grid>
           ))}
         </Grid>
