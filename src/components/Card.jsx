@@ -5,9 +5,10 @@ import { useHistory } from 'react-router-dom';
 import '../styles/Card-generation.css';
 
 
-export default function Cards({ pokemon }) {
+export default function Cards({ pokemon, pokemon_specie }) {
   const history = useHistory();
-  const pokemonId = pokemon.url.match(/\d+/g).slice(1)[0];
+  var _url = pokemon_specie != null ? pokemon_specie.url : pokemon.pokemon.url;
+  const pokemonId = _url.match(/\d+/g).slice(1)[0];
 
   function handleClick(pokemonId) {
     history.push(pokemonId)
@@ -18,13 +19,13 @@ export default function Cards({ pokemon }) {
       <div>
         <img
           className="card-img"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.match(/\d+/g).slice(1)}.png`}
-          alt={pokemon.name}
+          src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.pokemon.url.match(/\d+/g).slice(1)}.png`}
+          alt={pokemon_specie != null ? pokemon_specie.name : pokemon.pokemon.name}
           style={{ width: '170px' }}
         />
       </div>
       <div className="card-content">
-        <h2>{pokemon.name}</h2>
+        <h2>{pokemon_specie != null ? pokemon_specie.name : pokemon.pokemon.name}</h2>
       </div>
     </div>
   );
