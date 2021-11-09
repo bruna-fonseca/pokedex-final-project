@@ -83,7 +83,7 @@ export default function Generation() {
         <Grid className={classes.gridContainer} container spacing={4}>
           {generation && generation.slice(0, visible).map((pokemon, index) => (
             <Grid key={index} item xs={12} sm={6} md={4} >
-              <Cards pokemon={pokemon} />
+              <Cards pokemon_specie={pokemon} />
             </Grid>
           ))}
         </Grid>

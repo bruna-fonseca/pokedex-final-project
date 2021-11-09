@@ -8,6 +8,7 @@ import 'swiper/swiper.min.css'
 
 import '../styles/Slider.css';
 
+
 SwiperCore.use([Navigation]);
 
 export default function Carousel({ info, events }) {
