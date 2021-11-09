@@ -7,7 +7,7 @@ import '../styles/Card-generation.css';
 
 export default function Cards({ pokemon_specie }) {
   const history = useHistory();
-  const pokemonId = pokemon_specie.url.match(/\d+/g).slice(1)[0]
+  const pokemonId = pokemon_specie.url.match(/\d+/g).slice(1)[0];
 
   function handleClick(pokemonId) {
     history.push(`/pokemon/${pokemonId}`)
