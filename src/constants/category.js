@@ -1,7 +1,7 @@
-import eletrico from '../assets/categoriaeletrico.png';
-import fogo from '../assets/categoriafogo.png';
-import agua from '../assets/categoriagua.png';
-import planta from '../assets/categoriaplanta.png';
+import eletrico from '../assets/categoriaeletrico.jpeg';
+import fogo from '../assets/categoriafogo.jpeg';
+import agua from '../assets/categoriaagua.jpeg';
+import planta from '../assets/categoriaplanta.jpeg';
 
 const infocategory = [
     {
