@@ -94,7 +94,7 @@ export default function Generation() {
         </Grid>
 
         <StyledButton
-          style={{ margin: '0 auto', marginTop: '20px', marginBottom: '20px'}}
+          style={{ margin: '0 auto', marginTop: '20px' }}
           onClick={ showMore }
         >
           Mostrar mais
