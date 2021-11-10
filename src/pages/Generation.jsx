@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Loading from './Loading';
 import NavBar from '../components/NavBar';
 import Carousel from '../components/Carousel';
+
+import ThemeContext from '../context/ThemeContext';
 
 import Cards from '../components/Card';
 import Grid from '@mui/material/Grid';
@@ -25,6 +27,9 @@ export default function Generation() {
   const [generation, setGeneration] = useState([]);
   const [visible, setVisible] = useState(9);
   const [isLoading, setIsLoading] = useState(true);
+
+  const { definedTheme } = useContext(ThemeContext);
+  console.log(definedTheme);
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,12 +77,12 @@ export default function Generation() {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: definedTheme.background }}>
       {isLoading ? <Loading /> : (
       <div> 
         <NavBar />
 
-        <Title>Escolha sua geração favorita</Title>
+        <Title fontColor={ definedTheme.typography } >Escolha sua geração favorita</Title>
 
         <Carousel info={ generation_info } events={ [firstGeneration, secondGeneration, thirdGeneration, fourthGeneration ] } />
         <Grid className={classes.gridContainer} container spacing={4}>
@@ -89,7 +94,7 @@ export default function Generation() {
         </Grid>
 
         <StyledButton
-          style={{ margin: '0 auto', marginTop: '20px', marginBottom: '20px'}}
+          style={{ margin: '0 auto', marginTop: '20px' }}
           onClick={ showMore }
         >
           Mostrar mais

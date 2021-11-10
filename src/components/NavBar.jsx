@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory, Link } from "react-router-dom";
+
+import ThemeContext from '../context/ThemeContext';
+import Switch from 'react-switch';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -20,6 +23,11 @@ export default function NavBar() {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const { setGlobalTheme, globalTheme  } = useContext(ThemeContext);
+  
+  const handleTheme = () => {
+    setGlobalTheme(globalTheme === 'light' ? 'dark' : 'light');
+  };
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
@@ -87,6 +95,20 @@ export default function NavBar() {
                   <Link className="nav-links" to="/">Home</Link>
                   <Link className="nav-links" to="/geracoes">Gerações</Link>
                   <Link className="nav-links" to="/categorias">Categorias</Link>
+                  <Link className="nav-links" to="/sobre">Sobre</Link>
+                  <Switch
+                    onChange={ handleTheme }
+                    checkedIcon={false}
+                    uncheckedIcon={false}
+                    checked={globalTheme === 'dark'}
+                    height={15}
+                    width={40}
+                    handleDiameter={20}
+                    offColor="#313131"
+                    onColor="#313131"
+                    onHandleColor="#E8CDCD"
+                    offHandleColor="#E8CDCD"
+                  />
                 </div>
               )}
             </div>
