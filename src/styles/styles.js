@@ -8,9 +8,10 @@ export const StyledButton = styled.button`
   padding: 30px;
   border: none;
   border-radius: 10px;
-  width: 220px;
+  width: 260px;
   height: 50px;
   cursor: pointer;
+
 
   display: flex;
   justify-content: center;

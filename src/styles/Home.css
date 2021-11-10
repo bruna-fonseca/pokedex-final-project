@@ -1,44 +1,162 @@
-.conteudo{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.container{
   background-color: #EFC842;
   width: 100%;
-  height: 100vh;
-
+  height: 90vh;
+  padding: 0 auto;
+  display: flex;
 }
 
-.pai{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-
+.imagem{
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
 
 .pikachu{
-width: 1000px;
+  width: 680px;
+  position: absolute;
+  top: 75px;
+  left: 35%;
+  transform: translateX(-50px) translateY(-50px);
+}
+
+
+
+
+/*.pikachu{
+  width: 680px;
+  /* código abaixo centra a imagem ao centro */
+/*  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translateX(-50%) translateY(-50%);
+
+}
+*/
+
+.container .title {
+  font-size: 35px;
+  text-align: start;
+  position: relative;
+  left: 12%;
+  margin-top: 100px;
+
+}   
+
+.container .title .subtitle{
+  font-size: 22px;
+  text-align: justify;
+   
+}
+
+.btn {
+  height: 66px;
+  width: 268px;
+
+  border: none;
+  border-radius: 15px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  
+  cursor: pointer;
+  
+  position: absolute;
+  top: 455px;
+  left: 150px;
+
+  background: #F2243A;
+  color: #FFF;
+  
+ 
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 200ms ease-in-out;
+  box-shadow: 1px 9px 9px 1px rgb(51, 50, 50);
 
 }
 
-.filho{
-margin-top: 100px;
-margin-left: 150px;
-display: flex;
-flex-direction: column;
-justify-content: center;
 
-}
 
-.title{
-font-size: 60px;
-margin-bottom: 60px;
+@media (max-width: 870px)
+{
+  .container {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
+  
+  .container .title{
+    position: fixed;
+    top: 0;
+    left: 2;
 
-}
+    text-align: start;
+    
+    font-size: 45px;
 
-.title2{
-font-size: 33px;
-margin-bottom: 60px;
+  
 
-}
+  }
 
-.botao{
-margin-left: 10px;
+  .container .pikachu{
+    position: relative;
+    left: 0;
+    
+    opacity: 0.1;
+  }
 
-}
+  .container .btn{
+    position: absolute;
+    left: 4rem;
+    
+    top: 455px;
+    left: 120px;
+    z-index: 1;
+  }
+  
+ @media (min-width: 530px){
+  .container {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
+  
+  .container .title{
+    position: fixed;
+    top: 0;
+    left: 65px;
+
+    text-align: start;
+    justify-content: flex-start;
+    
+    font-size: 45px;
+  
+
+  }
+
+  .container .pikachu{
+    position: relative;
+    left: 0;
+    
+    opacity: 0.1;
+  }
+
+  .container .btn{
+    position: absolute;
+    left: 4rem;
+  
+    z-index: 1;
+   }
+  }
+ }
