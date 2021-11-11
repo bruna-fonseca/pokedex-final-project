@@ -29,7 +29,6 @@ export default function Generation() {
   const [isLoading, setIsLoading] = useState(true);
 
   const { definedTheme } = useContext(ThemeContext);
-  console.log(definedTheme);
 
   useEffect(() => {
     setTimeout(() => {

@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import category from '../constants/category'; 
 import Loading from './Loading';
 import NavBar from '../components/NavBar';
 import Carousel from '../components/Carousel';
+
+import ThemeContext from '../context/ThemeContext';
 
 import Cards from '../components/Card';
 import Grid from '@mui/material/Grid';
@@ -25,6 +27,9 @@ export default function Category(){
   const [categorias, setCategorias] = useState([]);
   const [visible, setVisible] = useState(9);
   const [isLoading, setIsLoading] = useState(true);
+
+  const { definedTheme } = useContext(ThemeContext);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -101,14 +106,13 @@ export default function Category(){
     setVisible((prevValues) => prevValues + 9);
   };
   return (
-    <div>
-      
+    <div style={{ backgroundColor: definedTheme.background }}>
 
       {isLoading ? <Loading /> : (
       <div> 
         <NavBar />
 
-        <Title>Escolha sua categoria favorita</Title>
+        <Title fontColor={ definedTheme.typography }>Escolha sua categoria favorita</Title>
 
         <Carousel info={ category } events={ [catFire, catWater, catGrass, catRaio ] } />
         <Grid className={classes.gridContainer} container spacing={4}>
@@ -120,7 +124,7 @@ export default function Category(){
         </Grid>
 
         <StyledButton
-          style={{ margin: '0 auto', marginTop: '20px', marginBottom: '20px'}}
+          style={{ margin: '0 auto', marginTop: '20px' }}
           onClick={ showMore }
         >
           Mostrar mais

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
 import { useParams } from 'react-router-dom';
+
+import ThemeContext from '../context/ThemeContext';
 
 import { Title } from '../styles/styles';
 
@@ -17,13 +19,12 @@ const CONTAINER_STYLES = {
   justifyContent: 'space-evenly',
 };
 
-
 export default function Details() {
   const { pokemonId } = useParams();
   const [pokemonInfo, setPokemonInfo] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
-  console.log(pokemonInfo);
+  const { definedTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
@@ -35,19 +36,21 @@ export default function Details() {
   }, [pokemonId]);
 
   return (
-    <div>
+    <div >
       {isLoading ? <Loading /> : (
-        <div>
+        <div style={{ backgroundColor: definedTheme.background, height: '100vh' }}>
           <NavBar />
-          <Title>Pokemon Stats</Title>
-          <div style={ CONTAINER_STYLES }>
-            <img
-              src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
-              alt={`pokemon ${pokemonId}`}
-              style={{ height: '300px' }}
-            />
-            <div>
-              <DetailsCard pokemonInfo={pokemonInfo} />
+          <div>
+          <Title fontColor={ definedTheme.typography }>Pokemon Stats</Title>
+            <div style={ CONTAINER_STYLES }>
+              <img
+                src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
+                alt={`pokemon ${pokemonId}`}
+                style={{ height: '300px' }}
+              />
+              <div>
+                <DetailsCard pokemonInfo={pokemonInfo} />
+              </div>
             </div>
           </div>
         </div>

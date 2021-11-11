@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import NavBar from '../components/NavBar';
 
+import ThemeContext from '../context/ThemeContext';
+
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -10,13 +12,6 @@ import Box from '@mui/material/Box';
 
 import { Title, StyledButton } from '../styles/styles';
 
-const CONTENT_TAB_STYLES = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  width: '50%',
-  margin: '0 auto',
-}
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,6 +48,16 @@ function a11yProps(index) {
 
 export default function About() {
   const [value, setValue] = React.useState(0);
+  const { definedTheme } = React.useContext(ThemeContext);
+
+  const CONTENT_TAB_STYLES = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '50%',
+    margin: '0 auto',
+    color: definedTheme.typography,
+  }  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -61,7 +66,7 @@ export default function About() {
   return (
     <div>
       <NavBar />
-    <Box sx={{ width: '100%' }}>
+    <Box style={{ backgroundColor: definedTheme.background }} sx={{ width: '100%', height: '100vh' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'center' }}>
         <Tabs
             TabIndicatorProps={{
@@ -70,26 +75,26 @@ export default function About() {
               onChange={handleChange}
               aria-label="basic tabs example"
         >
-          <Tab label="Sobre o Grupo" {...a11yProps(0)} />
-          <Tab label="Aieychan Karoline" {...a11yProps(1)} />
-          <Tab label="Beatriz Nogueira" {...a11yProps(2)} />
-          <Tab label="Bruna Fonseca" {...a11yProps(3)} />
-          <Tab label="Otávio Falcão" {...a11yProps(4)} />
+          <Tab style={{ color:  definedTheme.typography }} label="Sobre o Grupo" {...a11yProps(0)} />
+          <Tab style={{ color:  definedTheme.typography }} label="Aieychan Karoline" {...a11yProps(1)} />
+          <Tab style={{ color:  definedTheme.typography }} label="Beatriz Nogueira" {...a11yProps(2)} />
+          <Tab style={{ color:  definedTheme.typography }} label="Bruna Fonseca" {...a11yProps(3)} />
+          <Tab style={{ color:  definedTheme.typography }} label="Otávio Falcão" {...a11yProps(4)} />
 
         </Tabs>
       </Box>
-      <TabPanel style={CONTENT_TAB_STYLES} value={value} index={0}>
-        <Title>Grupo 5 da turma 2 de front-end</Title>
+      <TabPanel style={CONTENT_TAB_STYLES } value={value} index={0}>
+        <Title fontColor={ definedTheme.typography }>Grupo 5 da turma 2 de front-end</Title>
         <p>Projeto Final - Pokédex</p>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={1}>
-        <Title>Aieychan Karoline</Title>
+        <Title fontColor={ definedTheme.typography }>Aieychan Karoline</Title>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={2}>
-         <Title>Beatriz Nogueira</Title>
+         <Title fontColor={ definedTheme.typography }>Beatriz Nogueira</Title>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={3}>
-        <Title>Bruna Fonseca</Title>
+        <Title fontColor={ definedTheme.typography }>Bruna Fonseca</Title>
         <p>23 anos. Recifancy - PE</p>
         <p style={{ marginBottom: '20px' }}>Estudante de desenvolvimento web front-end com conhecimentos
           em HTML, CSS, Javascript, React, Vuejs e Nodejs.
@@ -116,7 +121,7 @@ export default function About() {
         </div>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={4}>
-      <Title>Otávio Falcão</Title>
+      <Title fontColor={ definedTheme.typography }>Otávio Falcão</Title>
       </TabPanel>
     </Box>
     </div>

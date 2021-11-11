@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NavBar from '../components/NavBar';
 import '../styles/Home.css';
 import pikachu from '../assets/home-bg.png';
 
+import ThemeContext from '../context/ThemeContext';
+
 export default function Home() {
+  const { definedTheme } = useContext(ThemeContext);
+
   return (
-    <div className='conteudo'>
+    <div>
       <NavBar />
       
-      <div className='container' >
-        <div className='title'>
+      <div className='container' style={{ backgroundColor: definedTheme.homeBg }}>
+        <div style={{ color: definedTheme.homeTxt }} className='title'>
           <p><strong>Encontre</strong> todos<br />
             os seus pokémons favoritos.</p>
           <br />

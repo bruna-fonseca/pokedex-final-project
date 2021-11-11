@@ -20,5 +20,9 @@
 }
 
 .swiper-button-next, .swiper-button-prev { 
-  color: black;
+  color: #FFF;
+}
+
+.swiper-button-next {
+  padding-right: 5px;
 }

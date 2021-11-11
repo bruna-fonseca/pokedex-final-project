@@ -18,7 +18,7 @@ const infocategory = [
     },
   {
     img: eletrico,
-    titulo: 'Categoria Eletrico',
+    titulo: 'Categoria Elétrico',
   },
 ];
 

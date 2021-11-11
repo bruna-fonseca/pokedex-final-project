@@ -23,7 +23,7 @@ export default function NavBar() {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const { setGlobalTheme, globalTheme  } = useContext(ThemeContext);
+  const { setGlobalTheme, globalTheme, definedTheme  } = useContext(ThemeContext);
   
   const handleTheme = () => {
     setGlobalTheme(globalTheme === 'light' ? 'dark' : 'light');
@@ -46,7 +46,7 @@ export default function NavBar() {
   };
 
   const BOX_STYLES = {
-    backgroundColor: '#F2243A',
+    backgroundColor: definedTheme.navBarColor,
   };
 
   return (
@@ -88,6 +88,8 @@ export default function NavBar() {
                     <MenuItem onClick={ () => handleMenuClick('/') }>Home</MenuItem>
                     <MenuItem onClick={ () => handleMenuClick('/geracoes') }>Gerações</MenuItem>
                     <MenuItem onClick={ () => handleMenuClick('/categorias') }>Categorias</MenuItem>
+                    <MenuItem onClick={ () => handleMenuClick('/sobre') }>Sobre</MenuItem>
+                    <MenuItem style={{ color: 'white', backgroundColor: 'black' }} onClick={ handleTheme }>Mudar tema</MenuItem>
                   </Menu>
                 </div>
               ) : (
@@ -104,8 +106,8 @@ export default function NavBar() {
                     height={15}
                     width={40}
                     handleDiameter={20}
-                    offColor="#313131"
-                    onColor="#313131"
+                    offColor={ definedTheme.offColor }
+                    onColor={ definedTheme.onColor }
                     onHandleColor="#E8CDCD"
                     offHandleColor="#E8CDCD"
                   />
