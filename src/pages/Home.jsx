@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar';
 import '../styles/Home.css';
 import pikachu from '../assets/home-bg.png';
 
+import { Link } from 'react-router-dom';
+
 import ThemeContext from '../context/ThemeContext';
 
 export default function Home() {
@@ -25,7 +27,9 @@ export default function Home() {
           </div>
         </div>
 
-        < button className="btn">Veja os pokémons</button>
+        <Link to="/geracoes">
+          < button className="btn">Veja os pokémons</button>
+        </Link>
 
         <div className="imagem">
           <img className="pikachu" src={pikachu} alt="pikachu" />

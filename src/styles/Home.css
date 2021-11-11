@@ -72,7 +72,8 @@
 
   background: #F2243A;
   color: #FFF;
-  
+
+  transition: all 0.3s ease;  
 }
 
 .btn:hover{
