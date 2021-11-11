@@ -10,16 +10,16 @@
 
 .imagem{
   width: 100%;
-  height: 500px;
+  height: 520px;
   overflow: hidden;
   position: relative;
 }
 
 .pikachu{
-  width: 680px;
+  width: 780px;
   position: absolute;
-  top: 75px;
-  left: 35%;
+  top: 48px;
+  left: 20%;
   transform: translateX(-50px) translateY(-50px);
 }
 
@@ -38,18 +38,19 @@
 */
 
 .container .title {
-  font-size: 35px;
+  font-size: 45px;
+  padding: 10px;
   text-align: start;
   position: relative;
   left: 12%;
-  margin-top: 100px;
+  margin-top: 85px;
 
 }   
 
 .container .title .subtitle{
   font-size: 22px;
   text-align: justify;
-   
+   margin-bottom: 18px;
 }
 
 .btn {
@@ -66,23 +67,54 @@
   cursor: pointer;
   
   position: absolute;
-  top: 455px;
+  top: 490px;
   left: 150px;
 
   background: #F2243A;
   color: #FFF;
   
- 
 }
 
-.btn:hover {
-  transform: scale(1.1);
-  transition: 200ms ease-in-out;
-  box-shadow: 1px 9px 9px 1px rgb(51, 50, 50);
-
+.btn:hover{
+  color: #F2243A;
+  background: #FFF;
 }
 
+@media (max-width: 1146px)
+{
+  .container {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
+  
+  .container .title{
+    position: fixed;
+    top: 0;
+    left: 2;
 
+    text-align: start;
+    
+    font-size: 45px;
+  }
+
+  .container .pikachu{
+    position: relative;
+    left: 0;
+    
+    opacity: 0.1;
+  }
+
+  .container .btn{
+    position: absolute;
+    left: 4rem;
+    
+    top: 485px;
+    left: 120px;
+    z-index: 1;
+  }
 
 @media (max-width: 870px)
 {
@@ -102,8 +134,6 @@
     text-align: start;
     
     font-size: 45px;
-
-  
 
   }
 
@@ -160,3 +190,4 @@
    }
   }
  }
+}
