@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 
 import NavBar from '../components/NavBar';
 
@@ -47,8 +47,12 @@ function a11yProps(index) {
 }
 
 export default function About() {
-  const [value, setValue] = React.useState(0);
-  const { definedTheme } = React.useContext(ThemeContext);
+  const [value, setValue] = useState(0);
+  const { definedTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.title = 'Sobre a equipe';
+  }, []);
 
   const CONTENT_TAB_STYLES = {
     display: 'flex',

@@ -45,6 +45,7 @@ export default function Details() {
             <div style={ CONTAINER_STYLES }>
               <img
                 src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
+                // src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}
                 alt={`pokemon ${pokemonId}`}
                 style={{ height: '300px' }}
               />
