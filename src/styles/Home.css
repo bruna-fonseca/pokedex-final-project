@@ -3,7 +3,7 @@
 .container{
   background-color: #EFC842;
   width: 100%;
-  height: 90vh;
+  height: 90.31vh;
   padding: 0 auto;
   display: flex;
 }
@@ -23,24 +23,13 @@
   transform: translateX(-50px) translateY(-50px);
 }
 
-
-
-
-/*.pikachu{
-  width: 680px;
-  /* código abaixo centra a imagem ao centro */
-/*  position: absolute;
-  top: 50%;
-  left: 58%;
-  transform: translateX(-50%) translateY(-50%);
-
-}
-*/
-
 .container .title {
   font-size: 45px;
   padding: 10px;
   text-align: start;
+  
+  display: block;
+  
   position: relative;
   left: 12%;
   margin-top: 85px;
@@ -72,12 +61,14 @@
 
   background: #F2243A;
   color: #FFF;
-  
+  transition-duration: 0.7s;
 }
 
 .btn:hover{
   color: #F2243A;
   background: #FFF;
+   
+ 
 }
 
 @media (max-width: 1146px)
@@ -184,8 +175,7 @@
 
   .container .btn{
     position: absolute;
-    left: 4rem;
-  
+    
     z-index: 1;
    }
   }
