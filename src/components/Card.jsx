@@ -7,7 +7,7 @@ import '../styles/Card-generation.css';
 
 export default function Cards({ pokemon_specie }) {
   const history = useHistory();
-  const pokemonId = _url.match(/\d+/g).slice(1)[0];
+  const pokemonId = pokemon_specie.url.match(/\d+/g).slice(1)[0];
 
   function handleClick(pokemonId) {
     history.push(`pokemon/${pokemonId}`)
@@ -18,8 +18,8 @@ export default function Cards({ pokemon_specie }) {
       <div>
         <img
           className="card-img"          
-          src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.url.match(/\d+/g).slice(1)}.png`}
-          alt={pokemon.name}
+          src={`https://cdn.traction.one/pokedex/pokemon/${pokemon_specie.url.match(/\d+/g).slice(1)}.png`}
+          alt={pokemon_specie.name}
           style={{ width: '170px' }}
         />
       </div>

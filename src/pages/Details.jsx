@@ -9,14 +9,15 @@ import NavBar from '../components/NavBar';
 import Loading from './Loading';
 import DetailsCard from '../components/DetailsCard';
 
-
+import '../styles/DetailsCard.css';
+{/*
 const CONTAINER_STYLES = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-evenly',
 };
-
+*/}
 
 export default function Details() {
   const { pokemonId } = useParams();
@@ -39,16 +40,19 @@ export default function Details() {
       {isLoading ? <Loading /> : (
         <div>
           <NavBar />
-          <Title>Pokemon Stats</Title>
-          <div style={ CONTAINER_STYLES }>
+          <Title>Pokemon Status</Title>
+          <div className='detalheGeral'>
+           <div className='detailsPage'>
             <img
               src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
               alt={`pokemon ${pokemonId}`}
               style={{ height: '300px' }}
+              className="imagemPokemon"
             />
-            <div>
+            <div className='cardPokemon'>
               <DetailsCard pokemonInfo={pokemonInfo} />
             </div>
+          </div>
           </div>
         </div>
       )}

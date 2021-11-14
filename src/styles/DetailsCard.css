@@ -5,11 +5,34 @@
   --yellow: #EFC842;
 }
 
+.detalheGeral{
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.detailsPage{
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container-card {
+ margin: 0 25%;
+}
+
 .card-details {
-  height: 400px;
+ 
   width: 450px;
+ 
   border: 5px solid var(--red);
   border-radius: 4px;
+  
 
 }
 
@@ -48,8 +71,7 @@
 
  margin: 27px;
  line-height: 2.8rem;
- font-size: 24px;
-
+ font-size: 20px;
 
  display: grid;
  grid-template-columns: auto auto; 
@@ -62,3 +84,145 @@
 
   color: #313131;
 }
+
+@media screen and (min-width:481px) and (max-width: 991px) {
+  .detalheGeral{
+  
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .detailsPage{
+    
+    flex-direction: column;    
+  }
+
+  .cardPokemon{
+   padding: 0;
+   margin: 0;
+   position:relative;
+   left: -119px;
+  
+  }
+
+  .card-details{
+    padding-bottom: 1px;
+    width: 476px;
+    border: none;
+    
+    background:#F2243A;
+    color: #FFF;
+    position:relative;
+    top: 10px;
+    
+  }
+  
+  .card-stats span{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #FFF;
+  }
+ 
+  
+}
+
+/*
+@media screen and (max-width: 500px) {
+  
+  .container-card{
+    position: relative;
+
+  }
+
+
+  .card-details{
+    width: 100%;
+    border: none;
+    position: absolute;
+    color: #FFF;
+    font-weight: 700;
+    top: 10px;
+    background-color: var(--red);
+  }
+
+  .card-stats span{
+    text-transform: capitalize;
+    font-weight: bold;
+  
+    color: #FFF;
+  }
+  
+
+  .imagemPokemon{
+    
+    position: relative;
+    left: 100px;
+    width: 280px;
+    
+  }
+}
+
+
+*/
+
+
+
+/*
+@media screen and (max-width: 481px) and (min-width: 991px) {
+
+  .detailsPage{
+  
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+    
+    
+  }
+  
+  
+  .container-card{
+   
+
+  }
+  .card-details{
+    width: 100%;
+  
+    border: 5px solid var(--red);
+    border-radius: 4px;
+  }
+
+  .card-stats span{
+    text-transform: capitalize;
+    font-weight: bold;
+  
+    color: #FFF;
+  }
+  
+
+  .imagemPokemon{
+    
+    position: relative;
+    left: 80px;
+    width: 270px;
+    
+  }
+}
+
+*/
+/*
+@media screen and (max-width: 991px ) and (min-width : 481px )  {
+  .card-details{
+   background-color: aqua;
+    
+  }
+}
+
+
+@media screen and (max-width: 1200px ) and (min-width : 992px ){
+
+  .card-details{
+    background-color:chartreuse ;
+  }
+  
+}
+*/
