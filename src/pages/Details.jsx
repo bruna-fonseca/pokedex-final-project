@@ -27,7 +27,7 @@ export default function Details() {
     setIsLoading(false),
     2000);
     document.title = `Pokemon Status`
-  }, []);
+  }, [pokemonId]);
 
   return (
     <div >
