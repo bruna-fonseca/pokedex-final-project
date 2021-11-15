@@ -20,7 +20,7 @@ export const StyledButton = styled.button`
 `;
 
 export const NotFoundTitle = styled.h1`
-  color: #313131;
+  color: ${props => props.fontColor};
   text-align: center;
 `;
 

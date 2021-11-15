@@ -12,6 +12,12 @@ import Box from '@mui/material/Box';
 
 import { Title, StyledButton } from '../styles/styles';
 
+import AieychanImg from '../assets/aieychan.png';
+import BeatrizImg from '../assets/beatriz.png';
+import BrunaImg from '../assets/bruna.png';
+import OtavioImg from '../assets/otavio.png';
+
+import '../styles/About.css';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +67,8 @@ export default function About() {
     width: '50%',
     margin: '0 auto',
     color: definedTheme.typography,
-  }  
+    textAlign: 'center',
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -87,21 +94,75 @@ export default function About() {
 
         </Tabs>
       </Box>
-      <TabPanel style={CONTENT_TAB_STYLES } value={value} index={0}>
+      <TabPanel className="tab" style={CONTENT_TAB_STYLES } value={value} index={0}>
         <Title fontColor={ definedTheme.typography }>Grupo 5 da turma 2 de front-end</Title>
-        <p>Projeto Final - Pokédex</p>
+        <p>Grupo formado por Aieychan, Bea, Bruna e Otávio.</p>
+        <p style={{ marginTop: '20px' }}>A equipe também desenvolveu o projeto <a style={{ textDecoration: 'none', color: '#F2243A' }} norreferer href="https://allora-restaurante.netlify.app/">Allora</a>, um site para um restaurante
+          italiano fictício.
+        </p>
       </TabPanel>
-      <TabPanel style={CONTENT_TAB_STYLES} value={value} index={1}>
+      <TabPanel className="tab" style={CONTENT_TAB_STYLES} value={value} index={1}>
         <Title fontColor={ definedTheme.typography }>Aieychan Karoline</Title>
+        <img alt="aieychan" style={{ marginBottom: '20px'}} src={ AieychanImg } />
+        <p>Sou estudante de desenvolvimento Front-End com planos de aprender cada vez mais.
+            Esforçada, dedicada e apaixonada pelo que faz, uma boa ouvinte, responsável e ótima em olhar crítico.</p>
+            <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
+        <a
+          style={{ color: '#FFF', textDecoration: 'none' }}
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/aieychankaroline/">
+              <StyledButton style={{ marginRight: '10px' }}>
+              LinkedIn
+              </StyledButton>
+          </a>
+          <a
+            style={{ color: '#FFF', textDecoration: 'none'}}
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/Aieychan01">
+              <StyledButton>
+                Github
+              </StyledButton>
+        </a>
+        </div>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={2}>
          <Title fontColor={ definedTheme.typography }>Beatriz Nogueira</Title>
+         <img alt="beatriz" style={{ height: '150px' }} src={ BeatrizImg } />
+         <p>
+         Estudante de Front-end Development, pelo StartLatam.
+         Busco ser uma profissonal completa, sempre com foco no processo de desenvolvimento. Utilizo a tecnologia para resolução de problemas, identificando um propósito por trás de cada desenvolvimento.
+         <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
+            <a
+              style={{ color: '#FFF', textDecoration: 'none' }}
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/beatriz-nogueira-30661a186/">
+                  <StyledButton style={{ marginRight: '10px' }}>
+                  LinkedIn
+                  </StyledButton>
+              </a>
+              <a
+                style={{ color: '#FFF', textDecoration: 'none'}}
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/beatrizrnogueira">
+                  <StyledButton>
+                    Github
+                  </StyledButton>
+            </a>
+        </div>
+         </p>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={3}>
         <Title fontColor={ definedTheme.typography }>Bruna Fonseca</Title>
+        <img alt="Bruna" style={{ height: '150px'}} src={ BrunaImg } />
         <p>23 anos. Recifancy - PE</p>
-        <p style={{ marginBottom: '20px' }}>Estudante de desenvolvimento web front-end com conhecimentos
-          em HTML, CSS, Javascript, React, Vuejs e Nodejs.
+        <p style={{ marginBottom: '20px' }}>
+          Estudante de desenvolvimento web com conhecimentos
+          em HTML, CSS, Javascript, React, Vuejs e Nodejs. Sou apaixonada por tecnologia e
+          sempre procuro aprimorar o meu aprendizado na área de TI.
         </p>
         <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
         <a
@@ -126,6 +187,28 @@ export default function About() {
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={4}>
       <Title fontColor={ definedTheme.typography }>Otávio Falcão</Title>
+      <img alt="Otávio" style={{ height: '150px' }} src={ OtavioImg } />
+
+      <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
+        <a
+          style={{ color: '#FFF', textDecoration: 'none' }}
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/ot%C3%A1vio-falc%C3%A3o-1ab6931b8/">
+              <StyledButton style={{ marginRight: '10px' }}>
+              LinkedIn
+              </StyledButton>
+          </a>
+          <a
+            style={{ color: '#FFF', textDecoration: 'none'}}
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/OtavioFalcaof">
+              <StyledButton>
+                Github
+              </StyledButton>
+        </a>
+        </div>
       </TabPanel>
     </Box>
     </div>
