@@ -33,7 +33,8 @@ export default function Details() {
     setTimeout(() => 
     setIsLoading(false),
     2000);
-  }, [pokemonId]);
+    document.title = `Pokemon Status`
+  }, []);
 
   return (
     <div >
@@ -41,11 +42,10 @@ export default function Details() {
         <div style={{ backgroundColor: definedTheme.background, height: '100vh' }}>
           <NavBar />
           <div>
-          <Title fontColor={ definedTheme.typography }>Pokemon Stats</Title>
+          <Title fontColor={ definedTheme.typography }>Pokémon Stats</Title>
             <div style={ CONTAINER_STYLES }>
               <img
                 src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
-                // src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}
                 alt={`pokemon ${pokemonId}`}
                 style={{ height: '300px' }}
               />

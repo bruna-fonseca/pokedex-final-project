@@ -131,7 +131,7 @@ export default function About() {
          <Title fontColor={ definedTheme.typography }>Beatriz Nogueira</Title>
          <img alt="beatriz" style={{ height: '150px' }} src={ BeatrizImg } />
          <p>
-         Estudante de Front-end Development, pelo StartLatam.
+         Estudante de Front-end Development, pelo Start.
          Busco ser uma profissonal completa, sempre com foco no processo de desenvolvimento. Utilizo a tecnologia para resolução de problemas, identificando um propósito por trás de cada desenvolvimento.
          <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
             <a

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import '../styles/Home.css';
 import pikachu from '../assets/home-bg.png';
@@ -9,6 +9,10 @@ import ThemeContext from '../context/ThemeContext';
 
 export default function Home() {
   const { definedTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.title = 'Home - Pokédex';
+  }, []);
 
   return (
     <div>
