@@ -11,6 +11,7 @@ export default function ThemeProvider({ children }) {
     homeTxt: '#000',
     navBarColor: '#F2243A',
     offColor: '#313131',
+    theme: 'light',
   };
 
   const darkTheme = {
@@ -20,6 +21,7 @@ export default function ThemeProvider({ children }) {
     homeTxt: '#FFF',
     navBarColor: '#4B126E',
     onColor: '#F2243A',
+    theme: 'dark',
   };
 
   const definedTheme = globalTheme === 'light' ? lightTheme : darkTheme;

@@ -32,7 +32,7 @@ export default function Home() {
         </div>
 
         <Link to="/geracoes">
-          < button className="btn">Veja os pokémons</button>
+          <button className="btn">Veja os pokémons</button>
         </Link>
 
         <div className="imagem">

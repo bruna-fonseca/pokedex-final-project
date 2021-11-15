@@ -23,20 +23,6 @@
   transform: translateX(-50px) translateY(-50px);
 }
 
-
-
-
-/*.pikachu{
-  width: 680px;
-  /* código abaixo centra a imagem ao centro */
-/*  position: absolute;
-  top: 50%;
-  left: 58%;
-  transform: translateX(-50%) translateY(-50%);
-
-}
-*/
-
 .container .title {
   font-size: 45px;
   padding: 10px;
@@ -56,6 +42,7 @@
 .btn {
   height: 66px;
   width: 268px;
+  /* margin-left: 22px; */
 
   border: none;
   border-radius: 15px;

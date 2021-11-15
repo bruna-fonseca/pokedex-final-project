@@ -6,18 +6,11 @@ import { useParams } from 'react-router-dom';
 import ThemeContext from '../context/ThemeContext';
 
 import { Title } from '../styles/styles';
+import Grid from '@mui/material/Grid';
 
 import NavBar from '../components/NavBar';
 import Loading from './Loading';
 import DetailsCard from '../components/DetailsCard';
-
-
-const CONTAINER_STYLES = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-evenly',
-};
 
 export default function Details() {
   const { pokemonId } = useParams();
@@ -39,20 +32,22 @@ export default function Details() {
   return (
     <div >
       {isLoading ? <Loading /> : (
-        <div style={{ backgroundColor: definedTheme.background, height: '100vh' }}>
+        <div style={{ backgroundColor: definedTheme.background, height: '100%' }}>
           <NavBar />
           <div>
-          <Title fontColor={ definedTheme.typography }>Pokémon Stats</Title>
-            <div style={ CONTAINER_STYLES }>
-              <img
-                src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
-                alt={`pokemon ${pokemonId}`}
-                style={{ height: '300px' }}
-              />
-              <div>
-                <DetailsCard pokemonInfo={pokemonInfo} />
-              </div>
-            </div>
+          <Title fontColor={ definedTheme.typography }>Pokémon Status</Title>
+            <Grid container style={{ paddingBottom: '50px', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
+              <Grid item >
+                <img
+                  src={`https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png`}
+                  alt={`pokemon ${pokemonId}`}
+                  style={{ height: '300px' }}
+                />
+              </Grid>
+              <Grid item >
+                <DetailsCard  pokemonInfo={pokemonInfo} />
+              </Grid>
+            </Grid>
           </div>
         </div>
       )}
