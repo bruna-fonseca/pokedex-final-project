@@ -77,7 +77,7 @@ export default function About() {
   return (
     <div>
       <NavBar />
-    <Box style={{ backgroundColor: definedTheme.background }} sx={{ width: '100%', height: '100vh' }}>
+    <Box style={{ backgroundColor: definedTheme.background, height: '100vh', width: '100%' }} sx={{ width: '100%', height: '100vh', paddingBottom: '80px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'center' }}>
         <Tabs
             TabIndicatorProps={{

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import ThemeContext from '../context/ThemeContext';
@@ -9,6 +9,9 @@ import { StyledButton, NotFoundTitle } from '../styles/styles';
 export default function NotFound() {
   const { definedTheme } = useContext(ThemeContext);
 
+  useEffect(() => {
+    document.title = 'Página não encontrada';
+  });
 
   const CONTAINER_STYLES = {
     display: 'flex',
