@@ -77,7 +77,7 @@ export default function About() {
   return (
     <div>
       <NavBar />
-    <Box style={{ backgroundColor: definedTheme.background, height: '100vh', width: '100%' }} sx={{ width: '100%', height: '100vh', paddingBottom: '80px' }}>
+    <Box style={{ backgroundColor: definedTheme.background, width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'center' }}>
         <Tabs
             TabIndicatorProps={{
@@ -97,7 +97,7 @@ export default function About() {
       <TabPanel className="tab" style={CONTENT_TAB_STYLES } value={value} index={0}>
         <Title fontColor={ definedTheme.typography }>Grupo 5 da turma 2 de front-end</Title>
         <p>Grupo formado por Aieychan, Bea, Bruna e Otávio.</p>
-        <p style={{ marginTop: '20px' }}>A equipe também desenvolveu o projeto <a style={{ textDecoration: 'none', color: '#F2243A' }} norreferer href="https://allora-restaurante.netlify.app/">Allora</a>, um site para um restaurante
+        <p style={{ marginTop: '20px', marginBottom: '152px' }}>A equipe também desenvolveu o projeto <a style={{ textDecoration: 'none', color: '#F2243A' }} norreferer href="https://allora-restaurante.netlify.app/">Allora</a>, um site para um restaurante
           italiano fictício.
         </p>
       </TabPanel>
@@ -106,25 +106,25 @@ export default function About() {
         <img alt="aieychan" style={{ marginBottom: '20px'}} src={ AieychanImg } />
         <p>Sou estudante de desenvolvimento Front-End com planos de aprender cada vez mais.
             Esforçada, dedicada e apaixonada pelo que faz, uma boa ouvinte, responsável e ótima em olhar crítico.</p>
-            <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
-        <a
-          style={{ color: '#FFF', textDecoration: 'none' }}
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/aieychankaroline/">
-              <StyledButton style={{ marginRight: '10px' }}>
-              LinkedIn
-              </StyledButton>
-          </a>
+        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
           <a
-            style={{ color: '#FFF', textDecoration: 'none'}}
+            style={{ color: '#FFF', textDecoration: 'none' }}
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/Aieychan01">
-              <StyledButton>
-                Github
-              </StyledButton>
-        </a>
+            href="https://www.linkedin.com/in/aieychankaroline/">
+                <StyledButton style={{ marginRight: '10px' }}>
+                LinkedIn
+                </StyledButton>
+            </a>
+            <a
+              style={{ color: '#FFF', textDecoration: 'none'}}
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/Aieychan01">
+                <StyledButton>
+                  Github
+                </StyledButton>
+          </a>
         </div>
       </TabPanel>
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={2}>
@@ -188,7 +188,10 @@ export default function About() {
       <TabPanel style={CONTENT_TAB_STYLES} value={value} index={4}>
       <Title fontColor={ definedTheme.typography }>Otávio Falcão</Title>
       <img alt="Otávio" style={{ height: '150px' }} src={ OtavioImg } />
-
+      <p>22 anos. Recife-PE</p>
+      <p>
+        Estudante de desenvolvimento web, sempre buscando expandir cada vez mais os meus conhecimentos, com foco, disciplina e constância.
+      </p>
       <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px' }}>
         <a
           style={{ color: '#FFF', textDecoration: 'none' }}
