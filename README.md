@@ -1,8 +1,7 @@
-<center>
-  <h1>Pokédex</h1>
+<h1 style="text-align:center;">Pokédex</h1>
 
-  <p>Projeto final para aperfeiçoar os conhecimentos em React</p>
-</center>
+<p style="text-align:center;">Projeto final para aperfeiçoar os conhecimentos em React</p>
+
 
 ## Tecnologias utilizadas 💾 
 
@@ -32,6 +31,19 @@ A pokédex é uma aplicação para buscar e conhecer mais sobre pokémons e seus
 - Página não encontrada
 - Tela de Carregamento
 
+## Como você pode usar a aplicação localmente
+
+```
+# Clonar o respositório do projeto
+$ git clone git@github.com:bruna-fonseca/pokedex-final-project.git
+
+# Instalar depedências
+$ npm install
+
+# Para subir o projeto no localhost
+$ npm start
+
+```
 ## Quem colaborou com o projeto
 
 - [@bruna-fonseca](https://github.com/bruna-fonseca)
