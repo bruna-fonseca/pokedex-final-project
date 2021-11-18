@@ -34,13 +34,13 @@ A pokédex é uma aplicação para buscar e conhecer mais sobre pokémons e seus
 ## Como você pode usar a aplicação localmente
 
 ```
-# Clonar o respositório do projeto
+// Clonar o respositório do projeto
 $ git clone git@github.com:bruna-fonseca/pokedex-final-project.git
 
-# Instalar depedências
+// Instalar depedências
 $ npm install
 
-# Para subir o projeto no localhost
+// Para subir o projeto no localhost
 $ npm start
 
 ```
