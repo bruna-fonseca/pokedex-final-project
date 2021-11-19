@@ -1,6 +1,13 @@
-<h1 style="text-align:center;">Pokédex</h1>
+<div style="display: flex; flex-direction: column; justify-content: center;">
 
-<p style="text-align:center;">Projeto final para aperfeiçoar os conhecimentos em React</p>
+  <img style="height:100px; margin: 0px auto;" src="./src/assets/red-pokeball.png" alt="pokébola" />
+
+  <h1 align="center">Pokédex</h1>
+
+</div>
+
+
+<p >Projeto final para aperfeiçoar os conhecimentos em React</p>
 
 
 ## Tecnologias utilizadas 💾 
