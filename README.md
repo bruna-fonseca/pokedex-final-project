@@ -1,11 +1,8 @@
-<div style="display: flex; flex-direction: column; justify-content: center;">
+<h1>
+  <img width="150px" src="./src/assets/red-pokeball.png" alt="pokébola" />
+</h1>
 
-  <img style="height:100px; margin: 0px auto;" src="./src/assets/red-pokeball.png" alt="pokébola" />
-
-  <h1 align="center">Pokédex</h1>
-
-</div>
-
+<h2 align="center">Pokédex</h2>
 
 <p >Projeto final para aperfeiçoar os conhecimentos em React</p>
 
