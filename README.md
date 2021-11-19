@@ -1,4 +1,4 @@
-<h1>
+<h1 align="center">
   <img width="150px" src="./src/assets/red-pokeball.png" alt="pokébola" />
 </h1>
 
